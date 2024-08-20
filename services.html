@@ -5,22 +5,114 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Freaky a Personal Category Responsive Website Template | Services :: W3layouts</title>
+	<title>Rinshad Portfolio</title>
 	<!-- Template CSS -->
 	<link rel="stylesheet" href="assets/css/style-starter.css">
 	<!-- Template CSS -->
 	<link href="//fonts.googleapis.com/css?family=Spartan:400,500,600,700,900&display=swap" rel="stylesheet">
 	<!-- Template CSS -->
+	 <style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #ffffff; /* Set to white */
+			color: #df0fdb; /* Set text color to black for better contrast on white */
+		}
+		
+		.project-container {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			margin: 40px;
+		}
+		
+		.project-card {
+			background-color: rgba(0, 0, 0, 0.8); /* Transparent dark background */
+			border-radius: 10px;
+			padding: 20px;
+			width: 300px;
+			text-align: center;
+			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+			transition: transform 0.3s, box-shadow 0.3s;
+		}
+		
+		
+		.project-card img {
+			width: 100%;
+			height: auto;
+			border-radius: 10px;
+			margin-bottom: 15px;
+		}
+		
+		.project-card h3 {
+			margin: 10px 0;
+			color: #a64afc;
+		}
+		
+		.project-card p {
+			font-size: 14px;
+			line-height: 1.6;
+			color: #cccccc;
+		}
+		
+		.buttons {
+			margin-top: 20px;
+		}
+		
+		.btn {
+			background-color: #6e00ff;
+			color: #ffffff;
+			padding: 10px 20px;
+			border-radius: 5px;
+			text-decoration: none;
+			margin: 5px;
+			transition: background-color 0.3s;
+		}
+		
+		.btn:hover {
+			background-color: #3e00b2;
+		}
+		
+		.project-card:hover {
+			transform: scale(1.05);
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+		}
+		/* Media Queries for Mobile Responsiveness */
+		@media (max-width: 768px) {
+			.project-container {
+				flex-direction: column;
+				margin: 20px;
+			}
+
+			.project-card {
+				width: 100%;
+				max-width: 90%;
+				margin-bottom: 20px;
+			}
+
+			.btn {
+				width: 100%;
+				padding: 10px;
+				margin-bottom: 10px;
+			}
+		}
+		
+		
+		
+	 </style>
+
+	<!-- Load jQuery first -->
+	<script src="assets/js/jquery-3.3.1.min.js"></script>
 
 </head>
 
 <body>
+	<!-- header -->
 	<section class="w3l-banner-main w3l-inner-page-main">
 		<div class="breadcrumb-infhny">
 			<header id="site-header" class="header-top">
 				<nav class="navbar navbar-expand-lg shift " id="header">
 					<a class="navbar-brand" href="index.html">
-						Freaky<span class="dot-1">.</span>
+						RA<span class="dot-1">.</span>
 					</a>
 					<button class="navbar-toggler bg-gradient" type="button" data-toggle="collapse"
 						data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
@@ -36,7 +128,7 @@
 								<a class="nav-link effect-3" href="about.html">About</a>
 							</li>
 							<li class="nav-item active">
-								<a class="nav-link effect-3" href="services.html">Services</a>
+								<a class="nav-link effect-3" href="services.html">Projects</a>
 							</li>
 					
 							<li class="nav-item">
@@ -51,381 +143,89 @@
 		</div>
 		<nav id="breadcrumbs" class="breadcrumbs">
 			<div class="page-wrapper">
-				<a href="#">Home</a> » <span class="breadcrumb_last" aria-current="page">Services</span></div>
+				<a href="#">Home</a> » <span class="breadcrumb_last" aria-current="page">Projects</span></div>
 		</nav>
 	</section>
-	<section class="w3l-services-6-main">
-		<div class="services-6 py-5">
-			<div class="container py-lg-5">
 
-				<h3 class="hny-title">First Look<span class="dot-1">.</span></h3>
-				<div class="row story-6-grids text-left mt-lg-5 mt-4">
-					<div class="col-lg-5 story-gd-left">
-						<img src="assets/images/serve.jpg" class="img-fluid" alt="">
+
+	<section class="w3-gallery">
+	<!-- Portfolio -->
+	<div class="portfolio py-5">
+		<div class="container py-lg-5">
+			<h3 class="hny-title">Stunning Projects<span class="dot-1">.</span></h3>
+			
+			<div class="project-container">
+				<div class="project-card">
+					<img src="assets/images/redstored.png" alt="Bliss Vista">
+					<h3>Redstore</h3>
+					<p>Developed a feature-rich E-commerce website using
+						Django. <br>
+						Integrated a PostreSQL database system to
+						efficiently manage product listings, user profiles <br>
+						essential features such as a shopping cart <br>
+					</p>
+					<div class="buttons">
+						<a href="https://github.com/rinshad-py/redstore" class="btn">GitHub</a>
+						<a href="https://rinshad.pythonanywhere.com/" class="btn">Visit</a>
 					</div>
-					<div class="col-lg-7 story-gd-right">
-						<div class="serve-6-hny">
-							<div class="serve-6-hny-icon">
-								<span class="fa fa-paint-brush"></span>
-							</div>
-							<div class="serve-6-hny-info">
-								<h6><a href="#">Modern design</a></h6>
-								<p>Lorem ipsum dolor sit amet consequuntur.</p>
-							</div>
-
-						</div>
-						<div class="serve-6-hny">
-							<div class="serve-6-hny-icon">
-								<span class="fa fa-newspaper-o"></span>
-							</div>
-							<div class="serve-6-hny-info">
-								<h6><a href="#">Multi-purpose</a></h6>
-								<p>Lorem ipsum dolor sit amet consequuntur.</p>
-							</div>
-
-						</div>
-						<div class="serve-6-hny">
-							<div class="serve-6-hny-icon">
-								<span class="fa fa-file-text-o"></span>
-							</div>
-							<div class="serve-6-hny-info">
-								<h6><a href="#">Powerful Editor</a></h6>
-								<p>Lorem ipsum dolor sit amet consequuntur.</p>
-							</div>
-
-						</div>
-						<div class="serve-6-hny">
-							<div class="serve-6-hny-icon">
-								<span class="fa fa-lightbulb-o"></span>
-							</div>
-							<div class="serve-6-hny-info">
-								<h6><a href="#">User Experience</a></h6>
-								<p>Lorem ipsum dolor sit amet consequuntur.</p>
-							</div>
-
-						</div>
-					</div>
-
 				</div>
+
+				<div class="project-card">
+					<img src="assets/images/port.png" alt="Portfolio">
+					<h3>Portfolio</h3>
+					<p>
+							
+						Integrated responsive design principles for optimal viewing on various devices. <br>
+						Utilized dynamic routing to create seamless navigation between sections. <br>
+						Implemented a contact form with validation and email functionality. <br>
+					</p>
+					<div class="buttons">
+						<a href="https://github.com/rinshad-py/port.git" class="btn">GitHub</a>
+					</div>
+				</div>
+
+
+				<!-- <div class="project-card">
+					<img src="path-to-your-image2.jpg" alt="Educational Web App">
+					<h3>Educational Web App</h3>
+					<p>I developed a website adding few templates...</p>
+					<div class="buttons">
+						<a href="github-link2" class="btn">GitHub</a>
+						<a href="demo-link2" class="btn">Demo</a>
+					</div>
+				</div> -->
+
 
 			</div>
 		</div>
-		</div>
-	</section>
-	<!-- head -->
-		<section class="features-4">
-			<div class="features4-block py-5">
-				<div class="container py-lg-5">
-					<h3 class="hny-title two">What I Do<span class="dot-1">.</span></h3>
-
-					<div class="features4-grids text-left row mt-5">
-						<div class="col-lg-4 col-md-6 features4-grid">
-							<div class="features4-grid-inn">
-								<span class="fa fa-pencil-square-o icon-fea4" aria-hidden="true"></span>
-								<h5><a href="#URL">Web Design</a></h5>
-								<p>Lorem ipsum dolor sit amet,Ea consequuntur illum facere.</p>
-
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6 features4-grid">
-							<div class="features4-grid-inn">
-								<span class="fa fa-umbrella icon-fea4" aria-hidden="true"></span>
-								<h5><a href="#URL">Web Development</a></h5>
-								<p>Lorem ipsum dolor sit amet,Ea consequuntur illum facere.</p>
-
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6 features4-grid third">
-							<div class="features4-grid-inn">
-								<span class="fa fa-cogs icon-fea4" aria-hidden="true"></span>
-								<h5><a href="#URL">Social Media</a></h5>
-								<p>Lorem ipsum dolor sit amet,Ea consequuntur illum facere.</p>
-
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6 features4-grid">
-							<div class="features4-grid-inn">
-								<span class="fa fa-spinner icon-fea4" aria-hidden="true"></span>
-								<h5><a href="#URL">Photography</a></h5>
-								<p>Lorem ipsum dolor sit amet,Ea consequuntur illum facere.</p>
-
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6 features4-grid">
-							<div class="features4-grid-inn">
-								<span class="fa fa-shield icon-fea4" aria-hidden="true"></span>
-								<h5><a href="#URL">Brand Identity</a></h5>
-								<p>Lorem ipsum dolor sit amet,Ea consequuntur illum facere.</p>
-
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6 features4-grid third">
-							<div class="features4-grid-inn">
-								<span class="fa fa-tachometer icon-fea4" aria-hidden="true"></span>
-								<h5><a href="#URL">Seo Optimization</a></h5>
-								<p>Lorem ipsum dolor sit amet,Ea consequuntur illum facere.</p>
-
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 	</div>
 	</section>
-	<!-- features-4 -->
-	<section class="w3l-pricing-12-main">
-		<!-- /pricing -->
-		<div class="content-12-price text-left py-5">
-			<div class="container py-lg-5">
+ 
+	<!-- //Portfolio -->
+	
 
-				<h3 class="hny-title">Pricing Plans<span class="dot-1">.</span></h3>
-				<div class="price-right mt-lg-5 mt-4">
-					<div class="tabs">
-						<ul class="nav nav-pills my-md-5 my-3" id="pills-tab" role="tablist">
-							<li class="nav-item">
-								<a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home"
-									role="tab" aria-controls="pills-home" aria-selected="true">Weekly</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile"
-									role="tab" aria-controls="pills-profile" aria-selected="false">Monthly</a>
-							</li>
-
-						</ul>
-						<div class="tab-content" id="pills-tabContent">
-							<div class="tab-pane fade show active" id="pills-home" role="tabpanel"
-								aria-labelledby="pills-home-tab">
-								<div class="menu-grids mt-4">
-									<div class="row t-in">
-										<div class="col-lg-4 col-md-6 price-main-info text-center">
-											<div class="price-inner card box-shadow">
-
-												<div class="card-body">
-													<h4 class="text-uppercase mb-3">Basic</h4>
-													<h5 class="card-title pricing-card-title">
-														<span class="align-top">$</span>30
-
-													</h5>
-													<ul class="list-unstyled mt-3 mb-4">
-														<li>100 MB Disk Space</li>
-														<li>2 Sub domains</li>
-														<li>5 Email Accounts</li>
-														<li>We support</li>
-														<li>Customer Support 24/7</li>
-													</ul>
-													<div class="read-more mt-lg-5 mt-4">
-														<a href="contact.html" class="read-more">
-															<span class="more_text">Buy Now</span>
-														</a>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-4 col-md-6 price-main-info text-center">
-											<div class="price-inner card box-shadow active">
-
-												<div class="card-body">
-													<h4 class="text-uppercase mb-3">Satandard</h4>
-													<h5 class="card-title pricing-card-title">
-														<span class="align-top">$</span>60
-
-													</h5>
-													<ul class="list-unstyled mt-3 mb-4">
-														<li>100 MB Disk Space</li>
-														<li>2 Sub domains</li>
-														<li>5 Email Accounts</li>
-														<li>We support</li>
-														<li>Customer Support 24/7</li>
-													</ul>
-													<div class="read-more mt-lg-5 mt-4">
-														<a href="contact.html" class="read-more">
-															<span class="more_text">Buy Now</span>
-														</a>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-4 col-md-6 price-main-info text-center">
-											<div class="price-inner card box-shadow">
-
-												<div class="card-body">
-													<h4 class="text-uppercase mb-3">Advance</h4>
-													<h5 class="card-title pricing-card-title">
-														<span class="align-top">$</span>90
-
-													</h5>
-													<ul class="list-unstyled mt-3 mb-4">
-														<li>100 MB Disk Space</li>
-														<li>2 Sub domains</li>
-														<li>5 Email Accounts</li>
-														<li>We support</li>
-														<li>Customer Support 24/7</li>
-													</ul>
-													<div class="read-more mt-lg-5 mt-4">
-														<a href="contact.html" class="read-more">
-															<span class="more_text">Buy Now</span>
-														</a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="tab-pane fade" id="pills-profile" role="tabpanel"
-								aria-labelledby="pills-profile-tab">
-								<div class="menu-grids mt-4">
-									<div class="row t-in">
-										<div class="col-lg-4 col-md-6 price-main-info text-center">
-											<div class="price-inner card box-shadow">
-
-												<div class="card-body">
-													<h4 class="text-uppercase mb-3">Basic</h4>
-													<h5 class="card-title pricing-card-title">
-														<span class="align-top">$</span>40
-
-													</h5>
-													<ul class="list-unstyled mt-3 mb-4">
-														<li>100 MB Disk Space</li>
-														<li>2 Sub domains</li>
-														<li>5 Email Accounts</li>
-														<li>We support</li>
-														<li>Customer Support 24/7</li>
-													</ul>
-													<div class="read-more mt-lg-5 mt-4">
-														<a href="contact.html" class="read-more">
-															<span class="more_text">Buy Now</span>
-														</a>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-4 col-md-6 price-main-info text-center">
-											<div class="price-inner card box-shadow active">
-
-												<div class="card-body">
-													<h4 class="text-uppercase mb-3">Satandard</h4>
-													<h5 class="card-title pricing-card-title">
-														<span class="align-top">$</span>70
-
-													</h5>
-													<ul class="list-unstyled mt-3 mb-4">
-														<li>100 MB Disk Space</li>
-														<li>2 Sub domains</li>
-														<li>5 Email Accounts</li>
-														<li>We support</li>
-														<li>Customer Support 24/7</li>
-													</ul>
-													<div class="read-more mt-lg-5 mt-4">
-														<a href="contact.html" class="read-more">
-															<span class="more_text">Buy Now</span>
-														</a>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-4 col-md-6 price-main-info text-center">
-											<div class="price-inner card box-shadow">
-
-												<div class="card-body">
-													<h4 class="text-uppercase mb-3">Advance</h4>
-													<h5 class="card-title pricing-card-title">
-														<span class="align-top">$</span>99
-
-													</h5>
-													<ul class="list-unstyled mt-3 mb-4">
-														<li>100 MB Disk Space</li>
-														<li>2 Sub domains</li>
-														<li>5 Email Accounts</li>
-														<li>We support</li>
-														<li>Customer Support 24/7</li>
-													</ul>
-													<div class="read-more mt-lg-5 mt-4">
-														<a href="contact.html" class="read-more">
-															<span class="more_text">Buy Now</span>
-														</a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-	</section>
-	<!-- //pricing -->
-	<section class="w3l-satisfied-main">
-		<!-- /specification-6-->
-		<div class="satisfy-content">
-			<div class="layer-3 py-5">
-				<div class="container">
-					<h3 class="hny-title two">Satisfied Clients<span class="dot-1">.</span></h3>
-					<!--start-divice-scree-slider-->
-					<div class="skill_info mt-lg-5 mt-4">
-						<div class="stats_left">
-							<div class="counter_grid">
-								<div class="icon">
-									<span class="fa fa-laptop" aria-hidden="true"></span>
-								</div>
-								<div class="icon_info">
-									<p class="counter">65</p>
-									<h3>Digital Market Place</h3>
-								</div>
-							</div>
-						</div>
-						<div class="stats_left">
-							<div class="counter_grid">
-								<div class="icon">
-									<span class="fa fa-user" aria-hidden="true"></span>
-								</div>
-								<div class="icon_info">
-									<p class="counter">563</p>
-									<h3>Made for Elite Clients</h3>
-								</div>
-							</div>
-						</div>
-						<div class="stats_left">
-							<div class="counter_grid">
-								<div class="icon">
-									<span class="fa fa-trophy" aria-hidden="true"></span>
-								</div>
-								<div class="icon_info">
-									<p class="counter">245</p>
-									<h3>Won On Contests</h3>
-								</div>
-							</div>
-						</div>
-
-					</div>
-
-				</div>
-			</div>
-	</section>
-	<!-- //specification-6-->
+	
 	<!-- footer -->
 	<footer class="w3l-footer-16">
 		<div class="footer-content py-lg-5 py-4 text-center">
 			<div class="container">
 				<div class="row copy-right">
 					<div class="col-lg-6 footer-left text-lg-left text-center">
-						<h6>© 2020 Freaky.Made with <span class="fa fa-heart" aria-hidden="true"></span> love.Design by
-							<a href="https://w3layouts.com/" target="_blank">
-								W3Layouts</a></h6>
+						<h6><b>Stay Connected On
+							Social Media <span class="fa fa-heart" aria-hidden="true"></span></b></h6>
 					</div>
 					<div class="col-lg-6 footer-right text-lg-right text-center">
 						<ul class="footer-gd-16">
-							<li><a href="#">Terms</a></li>
-							<li><a href="#">Support</a></li>
-							<li><a href="#">Privacy</a></li>
+							
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
 						<div class="share-icons-footer ml-lg-4">
-							<a href="#"><span class="fa fa-facebook"></span></a>
-							<a href="#"><span class="fa fa-twitter"></span></a>
-							<a href="#"><span class="fa fa-linkedin"></span></a>
+							<a href="https://www.instagram.com/rin_ju_?igsh=bmNlN2V2bW40Y2h3"><span class="fa fa-instagram" aria-hidden="true"></span></a>
+							<a href="https://github.com/rinshad-py"><span class="fa fa-github" aria-hidden="true"></span></a>
+							<a href="https://www.facebook.com/rinshad.rinju.37/"><span class="fa fa-facebook" aria-hidden="true"></span></a>
+							<a href="https://x.com/ARynshad44571?s=09"><span class="fa fa-twitter" aria-hidden="true"></span></a>
+							<a href="https://www.linkedin.com/in/rinshad-a-a29687279?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><span class="fa fa fa-linkedin-square" aria-hidden="true"></span></a>
+							<a href="https://wa.me/919809331970?text=I checked out your portfolio and thought it was great⭐. 'YourName'"><span class="fa fa-whatsapp" aria-hidden="true"></span></a>
 						</div>
 					</div>
 				</div>
@@ -517,3 +317,14 @@
 <!-- disable body scroll which navbar is in active -->
 <!-- //jQuery-Photo-filter-lightbox-portfolio-plugin -->
 <script src="assets/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+  
+
+
+
