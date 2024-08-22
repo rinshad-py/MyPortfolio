@@ -8,9 +8,42 @@
   <title>Rinshad Portfolio</title>
   <!-- Template CSS -->
   <link rel="stylesheet" href="assets/css/style-starter.css">
+
   <!-- Template CSS -->
   <link href="//fonts.googleapis.com/css?family=Spartan:400,500,600,700,900&display=swap" rel="stylesheet">
   <!-- Template CSS -->
+
+  <!-- sending email -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+      (function() {
+          emailjs.init("L3Pb1kRyXSTE4aqk2");
+      })();
+  </script>
+  <script>
+      function sendMail(event) {
+          event.preventDefault(); // Prevent default form submission
+
+          let parms = {
+              name: document.getElementById("name").value,
+              email: document.getElementById("email").value,
+              number: document.getElementById("number").value,
+              subject: document.getElementById("subject").value,
+              message: document.getElementById("message").value,
+          };
+
+          emailjs.send("service_7dhjddc", "template_hoyweo9", parms)
+              .then(() => {
+                  alert("We have received your email. Thank you for contacting us.");
+                  document.querySelector("form").reset(); // Reset the form fields
+              })
+              .catch((error) => {
+                  console.error("Failed to send email:", error);
+              });
+      }
+  </script>
+  <!-- sending email -->
+  
 
 </head>
 
@@ -61,23 +94,30 @@
         <div class="top-map">
           <div class="map-content-9">
             <!-- -------------changed here-------------- -->
-            <form id="contactForm">
+            <form id="contactForm" onsubmit="sendMail(event)">
               <div class="form-top1">
                 <h3 class="hny-title text-center mb-0">Drop me a line</h3>
                 <p class="mb-lg-5 mb-4 text-center">Interested in working together? Please let me know.</p>
                 <div class="form-top">
                   <div class="form-top-left">
-                    <input type="text" name="w3lName" id="w3lName" placeholder="Name" required="">
+                    <!-- <input type="text" name="w3lName" id="w3lName" placeholder="Name" required="">
                     <input type="number" name="w3lPhone" id="w3lPhone" placeholder="Your phone number" required="">
                     <input type="email" name="w3lSender" id="w3lSender" placeholder="Email*" required="">
-                    <input type="text" name="w3lSubject" id="w3lSubject" placeholder="Subject" required="">
+                    <input type="text" name="w3lSubject" id="w3lSubject" placeholder="Subject" required=""> -->
+
+                    <input type="text" name="name" id="name" placeholder="Name" required>
+                    <input type="number" name="number" id="number" placeholder="Your phone number" required>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                    <input type="text" name="subject" id="subject" placeholder="Subject" required>
                   </div>
                   <div class="form-top-right">
-                    <textarea name="w3lMessage" id="w3lMessage" placeholder="Message*" required=""></textarea>
+                    <!-- <textarea name="w3lMessage" id="w3lMessage" placeholder="Message*" required=""></textarea> -->
+
+                    <textarea name="message" id="message" placeholder="Message" required></textarea>
                   </div>
                 </div>
                 <div class="text-lg-right text-center">
-                  <button type="submit">Submit Now</button>
+                  <button type="submit" >Submit Now</button>
                 </div>
               </div>
             </form> 
@@ -166,6 +206,11 @@
     </script>
   </footer>
   <!-- //footer -->
+
+
+
+
+
   
 
 </body>
